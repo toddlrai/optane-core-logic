@@ -43,7 +43,7 @@ export async function POST(req: NextRequest) {
   }
 
   // Healthchecks.io Check
-  await fetch("https://hc-ping.com/49ba88ab-4abd-4aaf-ade8-3fa37faa757a").catch(() => null);
+  await fetch("https://HEALTHCHECKS_URL").catch(() => null);
   
   let event: any;
   try {
@@ -72,7 +72,7 @@ export async function POST(req: NextRequest) {
       paymentType: "subscription" | "usage";
     }
   > = {
-    pri_01kcgn71kmeypsjan8aqw1snf6: {
+    STARTER_ID: {
       plan: "starter",
       amount: 297,
       minutes: 1000,
@@ -80,7 +80,7 @@ export async function POST(req: NextRequest) {
       price_per_minute: 0.29,
       paymentType: "subscription",
     },
-    pri_01kcgp2hssyxaq4kyrxxegjvjv: {
+    GROWTH_ID: {
       plan: "growth",
       amount: 497,
       minutes: 2500,
@@ -88,7 +88,7 @@ export async function POST(req: NextRequest) {
       price_per_minute: 0.26,
       paymentType: "subscription",
     },
-    pri_01kcgpmajyawrje6emz4edyet5: {
+    SCALE_ID: {
       plan: "scale",
       amount: 697,
       minutes: 5000,
@@ -96,7 +96,7 @@ export async function POST(req: NextRequest) {
       price_per_minute: 0.23,
       paymentType: "subscription",
     },
-    pri_01kd56vwkfm7v52yjes8ymavt3: {
+    PRO_ID: {
       plan: "pro",
       amount: 997,
       minutes: 10000,
@@ -105,7 +105,7 @@ export async function POST(req: NextRequest) {
       paymentType: "subscription",
     },
     // ✅ USAGE PRICE — SHARED FOR ALL CLIENTS
-    pri_01kd5qrbh5d1hadyfa15sp0m51: {
+    USAGE_PRICE_ID: {
       plan: "usage",
       amount: 0,
       minutes: 0,
